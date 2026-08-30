@@ -1,2 +1,1 @@
--- require("shrewd")
-require("test")
+require("shrewd")
