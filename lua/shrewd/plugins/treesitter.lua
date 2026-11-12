@@ -6,11 +6,25 @@ return {
 	config = function()
 		local ts = require('nvim-treesitter')
 
+		vim.filetype.add({ extension = { mli = 'ocamlinterface', mll = 'ocamllex' } })
+		vim.treesitter.language.register('ocaml_interface', 'ocamlinterface')
+		vim.api.nvim_create_autocmd('FileType', {
+			pattern = { 'ocamlinterface', 'ocamllex' },
+			callback = function()
+				vim.cmd.runtime('ftplugin/ocaml.vim')
+				vim.bo.syntax = 'ocaml'
+			end,
+		})
+
 		local parsers = {
 			'lua',
 			'vim',
 			'vimdoc',
 			'query',
+			'swift',
+			'ocaml',
+			'ocaml_interface',
+			'ocamllex',
 		}
 
 		local parsers_loaded = {}

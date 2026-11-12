@@ -98,6 +98,10 @@ vim.lsp.config("vtsls", {
   },
 })
 
+-- Go
+vim.lsp.config("gopls", {})
+vim.lsp.enable("gopls")
+
 -- C/C++
 vim.lsp.config("clangd", {})
 vim.lsp.enable("clangd")
@@ -127,5 +131,9 @@ vim.lsp.config("sqlls", {})
 vim.lsp.enable("sqlls")
 
 -- -- Swift (sourcekit)
--- vim.lsp.config("sourcekit", {})
--- vim.lsp.enable("sourcekit")
+vim.lsp.config("sourcekit", {})
+vim.lsp.enable("sourcekit")
+
+-- OCaml 
+vim.lsp.config("ocamllsp", {})
+vim.lsp.enable("ocamllsp")

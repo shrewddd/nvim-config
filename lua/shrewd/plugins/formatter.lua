@@ -16,6 +16,9 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 
+			ocaml = { "ocamlformat" },
+			ocamlinterface = { "ocamlformat" },
+
 			python = { "ruff_format", "ruff_organize_imports" },
 
 			javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
